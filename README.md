@@ -77,12 +77,41 @@ Azure Logic Apps is a cloud-based service that allows you to automate workflows 
 
 <img width="565" height="657" alt="image" src="https://github.com/user-attachments/assets/32c2f990-fe68-47e3-98a1-8a03201e907b" />
 
+<img width="434" height="263" alt="image" src="https://github.com/user-attachments/assets/85639cd3-7718-4980-bdf5-c22e9b2e0fb5" />
+
+
+
+## **Flowchart**
+
+```
+
+\[Start]
+|
+\[Teams Chat Message Trigger]
+|
+\[For Each Message]
+|
+\[Get Message Details]
+|
+\[Condition: Contains banned keywords?]
+\|---Yes---> \[Send Email to Admin]
+\|---No----> \[Do Nothing]
+|
+\[Loop End]
+|
+\[End]
+
+```
 
 ### 🧠 2 **Azure Function** or **Cognitive Service** analyzes the message content
 <img width="466" height="458" alt="Screenshot 2025-07-17 Languagekeys" src="https://github.com/user-attachments/assets/92f6c72b-0aea-476a-96ad-06046bfef303" />
 
 ### 💬 3 📧 **send an alert** (e.g., via email)
   
+  <img width="113" height="61" alt="image" src="https://github.com/user-attachments/assets/40c5bbc2-7a0a-4cec-a48e-63ca43d53c5b" />
+
+<img width="803" height="230" alt="image" src="https://github.com/user-attachments/assets/5c3cae67-dfca-4219-91e2-4f20ea4e39f2" />
+
 
 
   
