@@ -105,6 +105,12 @@ Azure Logic Apps is a cloud-based service that allows you to automate workflows 
 
 ### 🧠 2 **Azure Function** or **Cognitive Service** analyzes the message content
 <img width="466" height="458" alt="Screenshot 2025-07-17 Languagekeys" src="https://github.com/user-attachments/assets/92f6c72b-0aea-476a-96ad-06046bfef303" />
+<img width="1276" height="314" alt="Screenshot 2025-07-17 fun4" src="https://github.com/user-attachments/assets/e03d2861-de9a-4290-becd-d66b8fee6948" />
+
+
+
+<img width="748" height="92" alt="Screenshot 2025-07-17 fun2" src="https://github.com/user-attachments/assets/5d3d4f37-045a-4fab-b61e-f738e81ccfd3" />
+
 
 ### 💬 3 📧 **send an alert** (e.g., via email)
   
@@ -112,11 +118,20 @@ Azure Logic Apps is a cloud-based service that allows you to automate workflows 
 
 <img width="803" height="230" alt="image" src="https://github.com/user-attachments/assets/5c3cae67-dfca-4219-91e2-4f20ea4e39f2" />
 
+<img width="321" height="330" alt="Screenshot 2025-07-18 093221" src="https://github.com/user-attachments/assets/ca14099e-48bf-4331-a055-5d5bb2d4f394" />
 
-
-  
----
  
+---
+ ## 🧪 Lab Summary: Microsoft Teams Chat Moderation Service
+
+This lab guides you through building an automated moderation system for Microsoft Teams using Azure services. The goal is to monitor Teams messages and trigger alerts when policy violations (e.g., banned keywords) are detected.
+
+### 🔧 What Build
+
+An automated workflow that:
+- Listens for incoming Teams chat messages
+- Checks each message for inappropriate content
+- Notifies an administrator via email if violations are found
 
 
 
