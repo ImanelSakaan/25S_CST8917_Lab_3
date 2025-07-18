@@ -1,5 +1,56 @@
 # CST8917 Lab 3: Implementing a Teams Chat Content Moderation Service
 
+## 📸 Demo Video
+
+🎥 Watch the demo here:  
+**[▶️ YouTube Video Link](https://youtu.be/ke40vtXDjCM)**
+
+---
+## 🛠️ Prerequisites
+- ✅ Azure subscription with appropriate permissions  
+- ✅ Microsoft Teams access
+- ✅ Basic understanding of Azure services
+- ✅ [Visual Studio Code](https://code.visualstudio.com/) + Azure Functions extension  
+
+### Azure Logic Apps
+
+Azure Logic Apps is a cloud-based service that allows you to automate workflows and integrate services without writing much code. It is ideal for building real-time systems triggered by services like Microsoft Teams, email, or HTTP endpoints.
+
+
+## Tasks
+
+### 1. Design the Moderation Workflow
+
+<img width="624" height="624" alt="image" src="https://github.com/user-attachments/assets/91d81af1-5c43-433a-bb9d-7bd28ac5fd39" />
+
+## Basic Workflow Components:##
+
+    - Trigger: Microsoft Teams - When a new chat message is posted
+    - Condition: Check message content for inappropriate content
+    - Action: Send email notification if violation detected
+    - Logging: Record the incident
+
+
+### 2. Build the Moderation Service
+
+
+
+
+### 3. Implement the Email Notification Logic
+
+
+
+
+
+### 4. Test the Workflow
+
+
+
+
+
+
+
+
 ## Objective
 
 In this lab, you will develop an **Microsoft Teams chat content moderation service** using **Azure Logic Apps**. The service will monitor Teams chat messages for inappropriate content and automatically trigger **email notifications** when a policy violation is detected. Optionally, you can enhance the workflow using **Azure Functions** and **Azure Cognitive Services for Language**.
@@ -10,9 +61,7 @@ By completing this lab, you will demonstrate your ability to orchestrate automat
 
 ## About the Technologies
 
-### Azure Logic Apps
 
-Azure Logic Apps is a cloud-based service that allows you to automate workflows and integrate services without writing much code. It is ideal for building real-time systems triggered by services like Microsoft Teams, email, or HTTP endpoints.
 
 ### Azure Cognitive Services (Optional)
 
