@@ -19,25 +19,51 @@ Azure Logic Apps is a cloud-based service that allows you to automate workflows 
 
 ## Tasks
 
-### 1. Design the Moderation Workflow
+## 1. Design the Moderation Workflow
 
 <img width="624" height="624" alt="image" src="https://github.com/user-attachments/assets/91d81af1-5c43-433a-bb9d-7bd28ac5fd39" />
 
-## Basic Workflow Components:##
+---
 
-    - Trigger: Microsoft Teams - When a new chat message is posted
-    - Condition: Check message content for inappropriate content
-    - Action: Send email notification if violation detected
-    - Logging: Record the incident
-
-
-### 2. Build the Moderation Service
+## 2. Build the Moderation Service
 
 
 
+#### **Step 1: Create Azure Resource Group**  
+**Name:** `teams-moderation-lab`
 
-### 3. Implement the Email Notification Logic
+<p align="left">
+  <img width="310" height="321" alt="Create Resource Group" src="https://github.com/user-attachments/assets/0b692c1c-48d8-4e84-afd1-0ea4c4cf9371" />
+</p>
 
+
+
+#### **Step 2: Set Up Microsoft Teams Webhook**  
+**Name:** `Content Moderation Webhook`  
+Webhook URL:  
+`https://algonquinlivecom.webhook.office.com/webhookb2/0fe7e6eb-470e-4b1b-8510-576962945c5b@ec1bd924-0a6a-4aa9-aa89-c980316c0449/IncomingWebhook/9660f9fc258c4a4a88e85c02131b59b5/e472f014-89f6-4887-b288-fadf45714780/V27Em6gOhWejIwrqbvi6FwkDQcwRT6H7pY4HyH0MWCXSY1`
+
+
+<p align="left">
+  <img width="328" height="333" alt="Webhook Name" src="https://github.com/user-attachments/assets/17d08c65-ca37-4b30-bd80-7f2a341ab28d" />
+</p>
+
+
+---
+
+## 3. Implement the Email Notification Logic
+
+#### **Step 1: Create Logic App Resource**  
+**Name:** `teams-content-moderation`
+
+<img width="457" height="438" alt="image" src="https://github.com/user-attachments/assets/1c7dabe2-5e7f-428a-ae31-4e6395fec03f" />
+
+
+**Basic Workflow Components:**
+- Trigger: Microsoft Teams - When a new chat message is posted
+- Condition: Check message content for inappropriate content
+- Action: Send email notification if violation detected
+- Logging: Record the incident
 
 
 
