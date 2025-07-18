@@ -3,7 +3,7 @@
 ## 📸 Demo Video
 
 🎥 Watch the demo here:  
-**[▶️ YouTube Video Link](https://youtu.be/ke40vtXDjCM)**
+**[▶️ YouTube Video Link](https://youtu.be/tT-EN_qwNzU)**
 
 ---
 ## 🛠️ Prerequisites
