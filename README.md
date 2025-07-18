@@ -19,152 +19,81 @@ Azure Logic Apps is a cloud-based service that allows you to automate workflows 
 
 ## Tasks
 
-## 1. Design the Moderation Workflow
+## 🔵 **1. Design the Moderation Workflow**
 
 <img width="624" height="624" alt="image" src="https://github.com/user-attachments/assets/91d81af1-5c43-433a-bb9d-7bd28ac5fd39" />
 
 ---
 
-## 2. Build the Moderation Service
+## 🔧 2. Building the Moderation Service Involves:
+
+### 📁 1. Setting Up Azure Infrastructure
+
+- ✅ **Resource Group** (to organize resources)
+  - **name:** `teams-moderation-lab`
+    
+- ✅ **Logic App** (main workflow engine)
+   - **name:** `teams-content-moderation`
+     
+- ✅ **Azure Function App** (for custom logic)
+  - **name:** `teams-moderation-functions2`
+    
+- ✅ **Cognitive Services** (for AI-powered content analysis) (Language service)
+  - **name:** `teams-language-service`
 
 
+### 📁 2. Integrating with Microsoft Teams
 
-#### **Step 1: Create Azure Resource Group**  
-**Name:** `teams-moderation-lab`
-
-<p align="left">
-  <img width="310" height="321" alt="Create Resource Group" src="https://github.com/user-attachments/assets/0b692c1c-48d8-4e84-afd1-0ea4c4cf9371" />
-</p>
-
-
-
-#### **Step 2: Set Up Microsoft Teams Webhook**  
-**Name:** `Content Moderation Webhook`  
-Webhook URL:  
-`https://algonquinlivecom.webhook.office.com/webhookb2/0fe7e6eb-470e-4b1b-8510-576962945c5b@ec1bd924-0a6a-4aa9-aa89-c980316c0449/IncomingWebhook/9660f9fc258c4a4a88e85c02131b59b5/e472f014-89f6-4887-b288-fadf45714780/V27Em6gOhWejIwrqbvi6FwkDQcwRT6H7pY4HyH0MWCXSY1`
+- 📡 **Create an Incoming Webhook** to receive messages from a Teams channel
+    **Name:** `Content Moderation Webhook`  
+    Webhook URL:  
+    `https://algonquinlivecom.webhook.office.com/webhookb2/0fe7e6eb-470e-4b1b-8510-576962945c5b@ec1bd924-0a6a-4aa9-aa89-c980316c0449/IncomingWebhook/9660f9fc258c4a4a88e85c02131b59b5/e472f014-89f6-4887-b288-fadf45714780/V27Em6gOhWejIwrqbvi6FwkDQcwRT6H7pY4HyH0MWCXSY1`
 
 
 <p align="left">
   <img width="328" height="333" alt="Webhook Name" src="https://github.com/user-attachments/assets/17d08c65-ca37-4b30-bd80-7f2a341ab28d" />
 </p>
 
+- 📡 **Register an Azure AD App** (if you want to call Microsoft Graph API)
+  #### 2.1 Register Application in Azure AD
+
+  #### 2.2 Configure API Permissions  
+    ```bash
+    az ad sp create --id 69b32b88-a39a-45a1-8f06-7921866333b0
+    ````
+
+  #### 2.3 Create Client Secret
+    `b143aefe-b514-4940-90b7-5330b5c2dc8c`
+<img width="535" height="358" alt="image" src="https://github.com/user-attachments/assets/b949f709-d825-40ea-beeb-22c24f85c34e" />
 
 ---
 
-## 3. Implement the Email Notification Logic
+### 🧱 3. Creating the Moderation Workflow
 
-#### **Step 1: Create Logic App Resource**  
-**Name:** `teams-content-moderation`
+- ⚙️ **Logic App** is triggered when a Teams message is posted
 
-<img width="457" height="438" alt="image" src="https://github.com/user-attachments/assets/1c7dabe2-5e7f-428a-ae31-4e6395fec03f" />
-
-
-**Basic Workflow Components:**
-- Trigger: Microsoft Teams - When a new chat message is posted
-- Condition: Check message content for inappropriate content
-- Action: Send email notification if violation detected
-- Logging: Record the incident
+  <img width="565" height="557" alt="image" src="https://github.com/user-attachments/assets/e0bd6574-3252-4eab-913f-4a3f58d45e82" />
 
 
+- 🧠 **Azure Function** or **Cognitive Service** analyzes the message content  
+- 📧 **send an alert** (e.g., via email)
 
+### 📁 1. **Logic App** is triggered when a Teams message is posted
 
-### 4. Test the Workflow
+- ⚙️ **Resource Group** (to organize resources)
 
+### 📁 2. **Azure Function** or **Cognitive Service** analyzes the message content  
 
+- 🧠 **Resource Group** (to organize resources) 
 
+### 📁 3. **send an alert** (e.g., via email) 
 
+- 📧 **Resource Group** (to organize resources)
 
-
-
-
-## Objective
-
-In this lab, you will develop an **Microsoft Teams chat content moderation service** using **Azure Logic Apps**. The service will monitor Teams chat messages for inappropriate content and automatically trigger **email notifications** when a policy violation is detected. Optionally, you can enhance the workflow using **Azure Functions** and **Azure Cognitive Services for Language**.
-
-By completing this lab, you will demonstrate your ability to orchestrate automated workflows using Azure services and apply content analysis to real-time communication data.
-
+  
 ---
-
-## About the Technologies
-
+ 
 
 
-### Azure Cognitive Services (Optional)
-
-Azure Cognitive Services for Language can analyze chat messages and identify inappropriate content using AI-powered natural language processing.
-
-### Azure Functions (Optional)
-
-Azure Functions can be used to customize or preprocess messages before they are evaluated by other services.
-
----
-
-## Tasks
-
-### 1. Design the Moderation Workflow
-
-- Create a **flowchart** that outlines how your moderation system works.
-- Include components like Microsoft Teams trigger, Logic App flow, optional Azure Functions, optional Cognitive Services, and email notifications.
-
-### 2. Build the Moderation Service
-
-- Use **Azure Logic Apps** to set up a trigger that listens for new chat messages from **Microsoft Teams**.
-- Optionally integrate:
-  - **Azure Functions** to process or filter messages.
-  - **Azure Cognitive Services** to analyze message content for violations.
-- Ensure that your service reacts in **real time**.
-
-### 3. Implement the Email Notification Logic
-
-- Configure the Logic App to **send an email** to a specified administrator when inappropriate content is detected.
-- Follow the format provided in the official alert template (if available).
-
-### 4. Test the Workflow
-
-- Simulate messages in Microsoft Teams and ensure:
-  - Violations are detected correctly.
-  - Email notifications are triggered.
-  - Optional services (Functions, Cognitive Services) are working correctly.
-
-### 5. Document Your Project
-
-Include the following in your documentation:
-- A screenshot or export of your workflow flowchart.
-- Description of your Logic App setup.
-- Optional: details about Azure Functions or Cognitive Services used.
-- Explanation of how you tested the workflow.
-- Challenges you encountered and how you resolved them.
-- Recommendations for future improvement.
-
-### 6. Record a Demo
-
-- Create a short video (3–5 minutes) demonstrating:
-  - Your Logic App in action.
-  - Explanation of your setup.
-  - Any lessons learned.
-
----
-
-## Deliverables
-
-- Your completed Logic App workflow.
-- A screenshot or exported image of your **moderation flowchart**.
-- Your written **report** (as a separate file or included in `README.md`).
-- A demo video uploaded to YouTube, linked in the `README.md`.
-
----
-
-## Submission Instructions
-
-Submit the following via Brightspace:
-
-- Link to your **public GitHub repository** containing:
-  - Logic App definitions
-  - Optional Function or Cognitive Service code
-  - `README.md` with documentation
-  - Your demo video link (if available)
-- Your GitHub repo must be **well-structured and publicly accessible**.
-
-**Deadline**: *Sunday, 20 July 2025*
 
 
