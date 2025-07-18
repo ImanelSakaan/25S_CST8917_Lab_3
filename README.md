@@ -40,6 +40,7 @@ Azure Logic Apps is a cloud-based service that allows you to automate workflows 
     
 - ✅ **Cognitive Services** (for AI-powered content analysis) (Language service)
   - **name:** `teams-language-service`
+<img width="191" height="185" alt="Screenshot 2025-07-17 conn3" src="https://github.com/user-attachments/assets/cb86fef1-fcd5-48bc-a7a7-6d4b54b367a0" />
 
 
 ### 📁 2. Integrating with Microsoft Teams
@@ -70,25 +71,19 @@ Azure Logic Apps is a cloud-based service that allows you to automate workflows 
 
 ### 🧱 3. Creating the Moderation Workflow
 
-- ⚙️ **Logic App** is triggered when a Teams message is posted
+<img width="335" height="458" alt="image" src="https://github.com/user-attachments/assets/05f5b2ac-6573-43af-86e5-81da6e01a414"/>
 
-  <img width="565" height="557" alt="image" src="https://github.com/user-attachments/assets/e0bd6574-3252-4eab-913f-4a3f58d45e82" />
+### ⚙️ 1 **Logic App** is triggered when a Teams message is posted
+
+<img width="565" height="657" alt="image" src="https://github.com/user-attachments/assets/32c2f990-fe68-47e3-98a1-8a03201e907b" />
 
 
-- 🧠 **Azure Function** or **Cognitive Service** analyzes the message content  
-- 📧 **send an alert** (e.g., via email)
+### 🧠 2 **Azure Function** or **Cognitive Service** analyzes the message content
+<img width="466" height="458" alt="Screenshot 2025-07-17 Languagekeys" src="https://github.com/user-attachments/assets/92f6c72b-0aea-476a-96ad-06046bfef303" />
 
-### 📁 1. **Logic App** is triggered when a Teams message is posted
+### 💬 3 📧 **send an alert** (e.g., via email)
+  
 
-- ⚙️ **Resource Group** (to organize resources)
-
-### 📁 2. **Azure Function** or **Cognitive Service** analyzes the message content  
-
-- 🧠 **Resource Group** (to organize resources) 
-
-### 📁 3. **send an alert** (e.g., via email) 
-
-- 📧 **Resource Group** (to organize resources)
 
   
 ---
